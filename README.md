@@ -40,16 +40,16 @@ Add the dependencies to your module's `build.gradle.kts`:
 ```kotlin
 dependencies {
     // Core library (required)
-    implementation("com.github.jaypatelbond.OCPPKotlin:ocpp-core:1.0.0")
+    implementation("com.github.Jaypatelbond.ocpp-kotlin:ocpp-core:1.0.0")
     
     // OCPP 2.0.1 support
-    implementation("com.github.jaypatelbond.OCPPKotlin:ocpp-2.0.1:1.0.0")
+    implementation("com.github.Jaypatelbond.ocpp-kotlin:ocpp-2.0.1:1.0.0")
     
     // OCPP 1.6 support (optional)
-    implementation("com.github.jaypatelbond.OCPPKotlin:ocpp-1.6:1.0.0")
+    implementation("com.github.Jaypatelbond.ocpp-kotlin:ocpp-1.6:1.0.0")
     
     // Android extensions (optional, for Android apps)
-    implementation("com.github.jaypatelbond.OCPPKotlin:ocpp-android:1.0.0")
+    implementation("com.github.Jaypatelbond.ocpp-kotlin:ocpp-android:1.0.0")
 }
 ```
 
