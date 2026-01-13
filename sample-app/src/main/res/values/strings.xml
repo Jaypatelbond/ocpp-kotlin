@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OCPP Sample</string>
+    <string name="title_connect">Connect</string>
+    <string name="title_disconnect">Disconnect</string>
+    <string name="title_boot_notification">Boot Notification</string>
+    <string name="title_authorize">Authorize</string>
+    <string name="title_start_transaction">Start Transaction</string>
+    <string name="title_stop_transaction">Stop Transaction</string>
+    <string name="hint_csms_url">CSMS WebSocket URL</string>
+    <string name="hint_charge_point_id">Charge Point ID</string>
+    <string name="hint_id_token">ID Token (RFID)</string>
+    <string name="label_status">Status:</string>
+    <string name="label_log">Log:</string>
+</resources>

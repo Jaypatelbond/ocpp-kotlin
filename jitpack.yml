@@ -1,0 +1,7 @@
+# JitPack configuration
+jdk=17
+install:
+  - ./gradlew :ocpp-core:publishToMavenLocal
+  - ./gradlew :ocpp-1.6:publishToMavenLocal
+  - ./gradlew :ocpp-2.0.1:publishToMavenLocal
+  - ./gradlew :ocpp-android:assembleRelease :ocpp-android:publishToMavenLocal

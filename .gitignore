@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Project exclude paths
+/ocpp-1.6/build/
+/ocpp-1.6/build/classes/kotlin/main/
+/ocpp-2.0.1/build/
+/ocpp-2.0.1/build/classes/kotlin/main/
+/ocpp-android/build/
+/ocpp-core/build/
+/ocpp-core/build/classes/kotlin/main/
+/ocpp-simulator/build/
+/ocpp-simulator/build/classes/kotlin/main/
+/sample-app/build/
