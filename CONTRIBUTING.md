@@ -5,14 +5,14 @@ Thank you for your interest in contributing to OCPP Kotlin! This document provid
 ## 🚀 Getting Started
 
 1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/OCPPKotlin.git`
+2. **Clone** your fork: `git clone https://github.com/jaypatelbond/OCPPKotlin.git`
 3. **Create a branch**: `git checkout -b feature/your-feature-name`
 
 ## 💻 Development Setup
 
 ### Requirements
 - JDK 17 or higher
-- Android Studio Hedgehog (2023.1.1) or newer
+- Android Studio Otter (2025.2.2) or newer
 - Kotlin 1.9+
 
 ### Building

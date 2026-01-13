@@ -17,6 +17,12 @@ A comprehensive, type-safe **OCPP (Open Charge Point Protocol)** client library 
 - 🔄 **Auto-Reconnect** - Automatic reconnection with exponential backoff
 - 🔐 **Secure** - Basic auth and certificate-based authentication support
 
+## 📸 Screenshots
+
+| Home | Charging | History | Settings |
+|:----:|:--------:|:-------:|:--------:|
+| ![Home](screenshots/home.png) | ![Charging](screenshots/charging.png) | ![History](screenshots/history.png) | ![Settings](screenshots/settings.png) |
+
 ## 📦 Installation
 
 Add JitPack repository to your project's `settings.gradle.kts`:
