@@ -105,7 +105,55 @@ class ChargingViewModel : Ocpp201ViewModel() {
         }
     }
 }
+class ChargingViewModel : Ocpp201ViewModel() {
+    // ...
+}
 ```
+
+### 🧩 Generic API (Version Agnostic)
+
+Write code that works with both OCPP 1.6 and 2.0.1:
+
+```kotlin
+// Select adapter
+val client: GenericOcppClient = when (config.version) {
+    "1.6" -> GenericOcpp16Adapter()
+    "2.0.1" -> GenericOcpp201Adapter()
+    else -> throw IllegalArgumentException("Unknown version")
+}
+
+// Connect & Authenticate (works for both!)
+client.connect(url, chargePointId)
+val bootParams = client.bootNotification("MyCharger", "MyCompany").getOrThrow()
+
+if (bootParams.accepted) {
+    client.startTransaction(connectorId = 1, idToken = "TAG123", meterStart = 0)
+}
+```
+
+### Complete Transaction Flow
+
+```kotlin
+// 1. Boot & Register
+client.bootNotification(station, BootReasonEnumType.PowerUp)
+
+// 2. Report Available
+client.statusNotification(timestamp, ConnectorStatusEnumType.Available, evseId = 1, connectorId = 1)
+
+// 3. Authorize Customer
+val auth = client.authorize(idToken).getOrThrow()
+
+// 4. Start Transaction
+client.transactionEvent(TransactionEventEnumType.Started, timestamp, TriggerReasonEnumType.Authorized, seqNo = 0, transactionInfo)
+
+// 5. Charging - Send Meter Values
+client.transactionEvent(TransactionEventEnumType.Updated, timestamp, TriggerReasonEnumType.MeterValuePeriodic, seqNo = 1, transactionInfo, meterValue = meterValues)
+
+// 6. Stop Transaction
+client.transactionEvent(TransactionEventEnumType.Ended, timestamp, TriggerReasonEnumType.Local, seqNo = 2, transactionInfo)
+```
+
+📖 **[See Full Transaction Examples →](docs/TRANSACTION_FLOW.md)**
 
 ## 🏗️ Architecture
 
