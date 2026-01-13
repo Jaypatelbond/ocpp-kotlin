@@ -24,4 +24,4 @@ local.properties
 /ocpp-core/build/classes/kotlin/main/
 /ocpp-simulator/build/
 /ocpp-simulator/build/classes/kotlin/main/
-/sample-app/build/
+/sample-app/build/.idea/

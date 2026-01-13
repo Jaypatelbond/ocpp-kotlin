@@ -95,7 +95,8 @@ fun HistoryScreen(
             }
         } else {
             LazyColumn(
-                modifier = Modifier.padding(16.dp),
+                modifier = Modifier.padding(horizontal = 16.dp),
+                contentPadding = PaddingValues(top = 16.dp, bottom = 24.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 items(sessions) { session ->
