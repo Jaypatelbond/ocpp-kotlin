@@ -208,3 +208,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Open Charge Alliance](https://www.openchargealliance.org/) for the OCPP specification
 - [OkHttp](https://square.github.io/okhttp/) for WebSocket support
 - [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) for JSON handling
+
+## ❓ FAQ
+
+**Q: Does this library support different connector types (Type 2, CCS, CHAdeMO)?**
+A: **Yes.** The library operates at the OCPP protocol level, which is agnostic to the physical connector type. It supports configuring and separately managing multiple connectors/EVSEs using standard OCPP identifiers (`connectorId` / `evseId`). The actual physical hardware control is handled by your charger's firmware, not this client library.
